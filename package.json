@@ -1,0 +1,47 @@
+{
+  "name": "view-ordem-de-servico",
+  "version": "0.0.1",
+  "description": "Tela de ordem de servico em canvas",
+  "readmeFilename": "README.md",
+  "main": "index.js",
+
+  "scripts": {
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/my-component.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/my-component.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/my-component.min.js"
+  },
+
+  "main": "dist/view-ordem-de-servico.umd.js",
+  "module": "dist/view-ordem-de-servico.esm.js",
+  "unpkg": "dist/view-ordem-de-servico.min.js",
+  "browser": {
+    "./sfc": "src/view-ordem-de-servico.vue"
+  },
+
+  "devDependencies": {
+    "rollup": "^0.57.1",
+    "rollup-plugin-buble": "^0.19.2",
+    "rollup-plugin-vue": "^3.0.0",
+    "vue": "^2.5.16",
+    "vue-template-compiler": "^2.5.16",
+  },
+
+  "keywords": [
+    "ordem",
+    "servico"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wendellvieira/view-ordem-de-servico.git"
+  },
+  "author": {
+    "name": "Jayr Alencar",
+    "email": "wendell.vieiracunha@gmail.com",
+    "homepage": "http://www.jayralencar.com.br"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8.0"
+  },
+}
